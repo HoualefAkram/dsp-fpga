@@ -4,6 +4,8 @@ class Txt:
 
     STOP_RECORD = "STOP"
 
-    WINDOW_SIZE = "400x240"
+    WINDOW_SIZE = "350x170"
 
     TITLE = "Audio recorder"
+
+    SELECT_FILE = "SELECT FILE"

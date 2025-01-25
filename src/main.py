@@ -3,7 +3,6 @@ from constants.strings import Txt
 from utils.audio_player import AudioPlayer
 from utils.audio_recorder import AudioRecorder
 from utils.csv_plotter import CsvPlotter
-from utils.file_picker import FilePicker
 from widgets.widgets import Widget
 
 
@@ -22,7 +21,9 @@ class AudioApp:
         self.__record_button.pack(pady=20)
 
         play_button = Widget.Button(
-            master=self.__root_tk, text="SELECT FILE", command=AudioPlayer.pick_and_play
+            master=self.__root_tk,
+            text=Txt.SELECT_FILE,
+            command=AudioPlayer.pick_and_play,
         )
         play_button.pack()
         self.__root_tk.mainloop()
