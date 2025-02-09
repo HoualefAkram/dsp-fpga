@@ -30,7 +30,7 @@ class AudioApp:
 
     def __pick(self):
         file_path = AudioPlayer.pick_and_play()
-        CsvPlotter.plot(file_path=file_path)
+        CsvPlotter.plot(file_path=file_path,xlabel=Txt.TIME,ylabel=Txt.AMPLITUDE)
 
     def __record(self):
         if not self.__recorder.is_recording:
@@ -39,7 +39,7 @@ class AudioApp:
         else:
             file_path = self.__recorder.stop()
             AudioPlayer.play(file_path=file_path)
-            CsvPlotter.plot(file_path=file_path)
+            CsvPlotter.plot(file_path=file_path, xlabel=Txt.TIME, ylabel=Txt.AMPLITUDE)
             self.__record_button.configure(text=Txt.START_RECORD)
 
 

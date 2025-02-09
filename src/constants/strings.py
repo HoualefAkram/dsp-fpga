@@ -9,3 +9,7 @@ class Txt:
     TITLE = "Audio recorder"
 
     SELECT_FILE = "SELECT FILE"
+
+    TIME = "Time (s)"
+
+    AMPLITUDE = "Amplitude"
