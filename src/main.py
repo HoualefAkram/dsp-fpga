@@ -23,10 +23,14 @@ class AudioApp:
         play_button = Widget.Button(
             master=self.__root_tk,
             text=Txt.SELECT_FILE,
-            command=AudioPlayer.pick_and_play,
+            command=self.__pick,
         )
         play_button.pack()
         self.__root_tk.mainloop()
+
+    def __pick(self):
+        file_path = AudioPlayer.pick_and_play()
+        CsvPlotter.plot(file_path=file_path)
 
     def __record(self):
         if not self.__recorder.is_recording:
@@ -34,6 +38,7 @@ class AudioApp:
             self.__record_button.configure(text=Txt.STOP_RECORD)
         else:
             file_path = self.__recorder.stop()
+            AudioPlayer.play(file_path=file_path)
             CsvPlotter.plot(file_path=file_path)
             self.__record_button.configure(text=Txt.START_RECORD)
 

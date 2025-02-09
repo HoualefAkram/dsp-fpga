@@ -12,8 +12,8 @@ class Widget:
             text=text,
             height=2,
             width=30,
-            background=Colors.BLUE,
-            activebackground=Colors.BLUE,
-            foreground=Colors.WHITE,
-            activeforeground=Colors.WHITE,
+            background=Colors.BLACK,
+            activebackground=Colors.BLACK,
+            foreground=Colors.BLUE,
+            activeforeground=Colors.BLUE,
         )
