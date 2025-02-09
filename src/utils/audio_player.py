@@ -17,5 +17,7 @@ class AudioPlayer:
     def pick_and_play(samplerate=44100):
         file_path = FilePicker.csv()
         print(f"FILE PATH: {file_path}")
+        if not file_path:
+            return;
         AudioPlayer.play(file_path=file_path, samplerate=samplerate)
         return file_path
