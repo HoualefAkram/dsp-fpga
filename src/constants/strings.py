@@ -4,7 +4,7 @@ class Txt:
 
     STOP_RECORD = "STOP"
 
-    WINDOW_SIZE = "350x170"
+    WINDOW_SIZE = "350x220"
 
     TITLE = "Audio recorder"
 
@@ -13,3 +13,5 @@ class Txt:
     TIME = "Time (s)"
 
     AMPLITUDE = "Amplitude"
+
+    DECIBEL = "Decibel"

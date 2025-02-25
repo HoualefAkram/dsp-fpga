@@ -12,7 +12,7 @@ class AudioRecorder:
         self.__stream = sd.Stream(channels=1, callback=self.__callback)
 
     @property
-    def is_recording(self):
+    def is_recording(self) -> bool:
         return self.__is_recording
 
     def __callback(self, indata, outdata, frames, time, status):
