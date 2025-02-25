@@ -41,5 +41,3 @@ class AudioRecorder:
                 writer.writerows(result)
             print(f"Recording stopped. Data saved to {filename}.")
             return file_path
-        
-

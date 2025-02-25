@@ -17,6 +17,6 @@ class AudioPlayer:
         file_path = FilePicker.csv()
         print(f"FILE PATH: {file_path}")
         if not file_path:
-            return;
+            return
         AudioPlayer.play(file_path=file_path, samplerate=samplerate)
         return file_path

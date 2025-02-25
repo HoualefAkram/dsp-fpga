@@ -5,8 +5,9 @@ from constants.colors import Colors
 
 class Widget:
     @staticmethod
-    def Button(master, command, text, background=Colors.WHITE,
-               foreground=Colors.FUCHSIA):
+    def Button(
+        master, command, text, background=Colors.WHITE, foreground=Colors.FUCHSIA
+    ):
         return tk.Button(
             master=master,
             command=command,
