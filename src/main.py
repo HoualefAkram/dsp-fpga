@@ -11,6 +11,7 @@ class AudioApp:
 
     def __init__(self):
         self.__root_tk = tk.Tk()
+        self.__root_tk.config(background=Colors.TEAL)
         self.__root_tk.geometry(Txt.WINDOW_SIZE)
         self.__root_tk.title(Txt.TITLE)
         self.__recorder = AudioRecorder()
