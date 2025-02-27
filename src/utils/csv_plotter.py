@@ -20,6 +20,7 @@ class CsvPlotter:
                 20 * log10(abs(output[i]) + constants.numbers.EPSILON)
                 for i in range(len(output))
             ]
+            output = output if not use_decibel else db
             x = [i / frequency for i in range(len(output))]
             plt.subplot(3, 1, 1)
             plt.plot(x, db if use_decibel else output)
