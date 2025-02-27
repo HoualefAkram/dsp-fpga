@@ -49,7 +49,7 @@ class AudioApp:
 
     def __pick(self):
         file_path = AudioPlayer.pick_and_play()
-        CsvPlotter.plot(file_path=file_path, xlabel=Txt.TIME, ylabel=Txt.AMPLITUDE)
+        CsvPlotter.plot(file_path=file_path, use_decibel=self.__is_decibel)
 
     def __record(self):
         if not self.__recorder.is_recording:
